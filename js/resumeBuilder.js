@@ -27,7 +27,7 @@ var work = {
   {
     "employer": "Smartling Inc.",
     "title": "Translator (English to Portuguese(PT))",
-    "location": "Online",
+    "location": "Valongo",
     "dates": "2013-2016",
     "description": "Translation phone and tablet apps and their websites"
   }
@@ -166,3 +166,5 @@ projects.display = function() {
   }
 }
 projects.display()
+
+$("#mapDiv").append(googleMap);
