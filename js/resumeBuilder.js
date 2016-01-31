@@ -3,16 +3,17 @@ var bio = {
   "role" : "Web Developer",
   "contacts" : {
     "mobile" : "+351919595441",
-    "email" : "pauloesteves8",
-    "github" : "https://github.com/pauloesteves8",
-    "twitter" : "@pauloesteves8",
+    "email" : "pauloesteves8@gmail.com",
+    "github" : "https://github.com/PEsteves8",
+    //"twitter" : "@pauloesteves8",
     "location" : "Porto, Portugal"
    },
-   "welcomeMessage": "Hi, welcome to my CV!",
+   "welcomeMessage": "Welcome! This is a CV that I built as a way to practice using jQuery and JSON to keep the HTML uploaded. It was originally one of Udacity's projects (Front-End Nanodegree), but it really does a fine job as an actual CV. Send some feedback!",
    "skills" : [
-     "Javascript", "HTML", "CSS", "Python"
+     "Javascript", "HTML", "CSS", "Python", "Video Production",
+      "Adobe Premiere Pro", "Adobe After Effects"
    ],
-  "pictureURL" : "https://placehold.it/250x250"
+  "pictureURL" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/070/049/276f628.jpg"
 };
 
 var work = {
@@ -22,17 +23,41 @@ var work = {
     "title": "Marketing Intern",
     "location": "Dublin, Ireland",
     "dates": "Feb 2015 - Aug 2015",
-    "description": "Case study interviews and media projects for internal distribution"
+    "description": "During my stay at SurveMonkey Inc (part of the Inov Contacto program) I had a number of different tasks:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team."
   },
   {
     "employer": "Smartling Inc.",
     "title": "Translator (English to Portuguese(PT))",
-    "location": "Valongo",
+    "location": "Online",
     "dates": "2013-2016",
-    "description": "Translation phone and tablet apps and their websites"
+    "description": "Smartling is a fast and easy way for people to translate and localize their websites and apps.<br>For the past few years, I've been working as one of the English to Portuguese (PT) translators."
+  },
+  {
+    "employer": "Freelancer",
+    "title": "Video Producer",
+    "location": "Porto",
+    "dates": "2011-2016",
+    "description": "I occasionally work as a freelance video producer, doing both corporate videos and content for TV and web."
   }
 ]
 };
+
+var projects = {
+  "projects" : [
+    {
+    "title": "Portfolio Site",
+    "dates": "Jan 2016",
+    "images": [],
+    "description": "A simple webpage created using the boostrap framework"
+  },
+  {
+    "title": "CV",
+    "dates": "Feb 2016",
+    "images": [],
+    "description": "A CV using a page that gets loaded dynamically using Javascript and JSON"
+  }
+]
+}
 
 var education = {
   "schools": [
@@ -64,22 +89,7 @@ var education = {
 }
 
 
-var projects = {
-  "projects" : [
-    {
-    "title": "Portfolio Site",
-    "dates": "Jan 2016",
-    "images": ["https://placehold.it/250x250"],
-    "description": "A simple webpage created using the boostrap framework"
-  },
-  {
-    "title": "CV",
-    "dates": "Feb 2016",
-    "images": ["https://placehold.it/250x250", "https://placehold.it/250x250"],
-    "description": "A CV using a page that gets loaded dynamically using Javascript and JSON"
-  }
-]
-}
+
 
 bio.display = function() {
 
@@ -98,7 +108,9 @@ $("#header").prepend(formattedName);
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#topContacts").append(formattedGithub);
+if (bio.contacts.twitter) {
 $("#topContacts").append(formattedTwitter);
+}
 $("#topContacts").append(formattedLocation);
 $("#header").append(formattedPictureURL);
 $("#header").append(formattedWelcome_message);
