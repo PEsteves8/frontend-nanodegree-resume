@@ -11,7 +11,8 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Trebuchet MS";
+
 }
 
 .clear-fix {
@@ -166,6 +167,23 @@ span {
 
 #lets-connect {
   text-align: center;
+}
+
+.ghlink:link {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+  display: inline;
+}
+
+.ghlink:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
+.icontacto {
+  display: inline;
 }
 
 /* Media queries to handle various device widths */

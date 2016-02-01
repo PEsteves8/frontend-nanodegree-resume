@@ -8,7 +8,7 @@ var bio = {
     //"twitter" : "@pauloesteves8",
     "location" : "Porto, Portugal"
    },
-   "welcomeMessage": "Welcome! This is a CV that I built as a way to practice using jQuery and JSON to keep the HTML uploaded. It was originally one of Udacity's projects (Front-End Nanodegree), but it really does a fine job as an actual CV. Send some feedback!",
+   "welcomeMessage": "Welcome! I built this CV as a way to practice using jQuery and JSON to keep the HTML uploaded. It was originally one of Udacity's projects for their Front-End Nanodegree, but it sure does a fine job as an actual CV! Feel free to contact me.",
    "skills" : [
      "Javascript", "HTML", "CSS", "Python", "Video Production",
       "Adobe Premiere Pro", "Adobe After Effects"
@@ -23,11 +23,11 @@ var work = {
     "title": "Marketing Intern",
     "location": "Dublin, Ireland",
     "dates": "Feb 2015 - Aug 2015",
-    "description": "During my stay at SurveMonkey Inc (part of the Inov Contacto program) I had a number of different tasks:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team."
+    "description": "During my stay at SurveyMonkey Inc. (part of the <a href='http://www.portugalglobal.pt/PT/InovContacto/Paginas/AboutInovContacto.aspx' class='icontacto' target='_blank'>Inov Contacto</a> internship program) I had a number of different tasks:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team."
   },
   {
     "employer": "Smartling Inc.",
-    "title": "Translator (English to Portuguese(PT))",
+    "title": "Translator (English to Portuguese(PT)",
     "location": "Online",
     "dates": "2013-2016",
     "description": "Smartling is a fast and easy way for people to translate and localize their websites and apps.<br>For the past few years, I've been working as one of the English to Portuguese (PT) translators."
@@ -48,13 +48,13 @@ var projects = {
     "title": "Portfolio Site",
     "dates": "Jan 2016",
     "images": [],
-    "description": "A simple webpage created using the boostrap framework"
+    "description": "A simple portfolio webpage created using the boostrap framework"
   },
   {
     "title": "CV",
     "dates": "Feb 2016",
     "images": [],
-    "description": "A CV using a page that gets loaded dynamically using Javascript and JSON"
+    "description": "The page you're visiting right now. The page gets loaded dynamically using Javascript and JSON"
   }
 ]
 }
@@ -62,29 +62,54 @@ var projects = {
 var education = {
   "schools": [
     {
-      "name": "Faculty of Engineering of the University of Porto",
-      "location": "Porto, Portugal",
-      "degree": "N/A",
-      "majors": ["Electrical Engineering"],
-      "dates": "2006-2007",
-      "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
-    },
-    {
       "name": "School of Accounting and Administration of Porto",
       "location": "Porto, Portugal",
-      "degree": "BA",
+      "degree": "BA - 3 year degree",
       "majors": ["Marketing"],
       "dates": "2007-2010",
       "url": "http://iscap.ipp.pt/"
+    },
+    {
+      "name": "Faculty of Engineering of the University of Porto",
+      "location": "Porto, Portugal",
+      "degree": "N/A - 1st year attendance",
+      "majors": ["Electrical Engineering"],
+      "dates": "2006-2007",
+      "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
     }
   ],
   "onlineCourses": [
     {
+      "title": "Front-End Nanodegree (Non-Paid Version)",
+      "school": "Udacity",
+      "dates": 2016,
+      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    },
+    {
       "title": "Intro to Computer Science",
       "school": "Udacity",
       "dates": 2015,
-      "url": "www.udacity.com"
+      "url": "https://www.udacity.com/course/intro-to-computer-science--cs101"
+    },
+    {
+      "title": "HTML, CSS and Javascript",
+      "school": "Coursera - The Hong Kong University of Science and Technology",
+      "dates": 2015,
+      "url": "https://www.udacity.com/course/programming-languages--cs262"
+    },
+    {
+      "title": "Computer Science (multiple courses): Algorithms, Cryptography, Information Theory ",
+      "school": "Khan Academy",
+      "dates": 2015,
+      "url": "https://www.khanacademy.org/computing/computer-science"
+    },
+    {
+      "title": "Programming (multiple courses): HTML, CSS, Javascript and jQuery; Intro to SQL; JS: Games and Visualizations; JS: Natural Simulations ",
+      "school": "Khan Academy",
+      "dates": 2014,
+      "url": "https://www.khanacademy.org/computing/computer-programming"
     }
+
   ]
 }
 
@@ -97,7 +122,7 @@ var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%data%", bio.contacts.github);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedPictureURL = HTMLbioPic.replace("%data%", bio.pictureURL);
@@ -108,6 +133,7 @@ $("#header").prepend(formattedName);
 $("#topContacts").append(formattedMobile);
 $("#topContacts").append(formattedEmail);
 $("#topContacts").append(formattedGithub);
+
 if (bio.contacts.twitter) {
 $("#topContacts").append(formattedTwitter);
 }
@@ -122,9 +148,14 @@ for (key in bio.skills) {
   $("#skills").append(formattedSkills);
 }
 
-}
+// Code to simply add the basic contact info in the footer
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedGithub);
+$("#footerContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedLocation);
 
-bio.display();
+}
 
 work.display = function() {
   for (key in work.jobs) {
@@ -142,8 +173,6 @@ work.display = function() {
     }
   }
 }
-
-work.display();
 
 
 education.display = function() {
@@ -171,26 +200,30 @@ education.display = function() {
     }
   }
 
+if (education.onlineCourses.length > 0) {
+  $("#education").append(HTMLonlineClasses);
+  $("#education").append(HTMLschoolStart);
+
+}
+
   for (key in education.onlineCourses) {
 
     if (education.onlineCourses.hasOwnProperty(key)) {
 
-      $("#education").append(HTMLonlineClasses);
-      $("#education").append(HTMLschoolStart);
-      var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[key].title);
+
+      var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[key].title).replace("#", education.onlineCourses[key].url);
       var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key].school);
       var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[key].dates);
       var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[key].url);
       $(".education-entry:last").append(formattedTitle + formattedSchool);
       $(".education-entry:last").append(formattedDates);
-      $(".education-entry:last").append(formattedURL);
+      //$(".education-entry:last").append(formattedURL);
 
 
     }
   }
 
 }
-education.display()
 
 projects.display = function() {
   for (key in projects.projects) {
@@ -211,17 +244,15 @@ projects.display = function() {
     }
   }
 }
+
+bio.display();
+work.display();
+education.display()
 projects.display()
 
 // Code to add the "Where I worked" map
 $("#mapDiv").append(googleMap);
 
-// Code to simply add the basic contact info in the footer
-$("#footerContacts").append(formattedMobile);
-$("#footerContacts").append(formattedEmail);
-$("#footerContacts").append(formattedGithub);
-$("#footerContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedLocation);
 
 
 // Part of one of the quizzes, this code logs the position of each mouse click
