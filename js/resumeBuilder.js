@@ -22,19 +22,22 @@ var work = {
     "title": "Marketing Intern",
     "location": "Dublin, Ireland",
     "dates": "Feb 2015 - Aug 2015",
-    "description": "During my stay at SurveyMonkey Inc. (part of the <a href='http://www.portugalglobal.pt/PT/InovContacto/Paginas/AboutInovContacto.aspx' class='icontacto' target='_blank'>Inov Contacto</a> internship program) I had a number of different tasks. Here are a few of them:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team."
+    "description": "During my stay at SurveyMonkey Inc. (part of the <a href='http://www.portugalglobal.pt/PT/InovContacto/Paginas/AboutInovContacto.aspx' class='icontacto' target='_blank'>Inov Contacto</a> internship program) I had a number of different tasks. Here are a few of them:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team.",
+    "url": "https://www.surveymonkey.com"
   }, {
     "employer": "Smartling Inc.",
     "title": "Translator (English to Portuguese(PT)",
     "location": "Online",
     "dates": "2013-2016",
-    "description": "Smartling is a fast and easy way for people to translate and localize their websites and apps.<br>For the past few years, I've been working as one of the English to Portuguese (PT) translators."
+    "description": "Smartling is a fast and easy way for people to translate and localize their websites and apps.<br>For the past few years, I've been working as one of the English to Portuguese (PT) translators.",
+    "url": "https://www.smartling.com/"
   }, {
     "employer": "Freelancer",
     "title": "Video Producer",
     "location": "Porto",
     "dates": "2011-2016",
-    "description": "I occasionally work as a freelance video producer, doing both corporate videos and content for TV and web."
+    "description": "I occasionally work as a freelance video producer, doing both corporate videos and content for TV and web.",
+    "url": "www.poo.com"
   }]
 };
 
@@ -43,7 +46,7 @@ var projects = {
     "title": "Portfolio Site",
     "dates": "Jan 2016",
     "images": [],
-    "description": "A simple portfolio webpage created using the boostrap framework"
+    "description": "A simple portfolio webpage created using the Bootstrap framework"
   }, {
     "title": "CV",
     "dates": "Feb 2016",
@@ -69,32 +72,31 @@ var education = {
     "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
   }],
   "onlineCourses": [{
-      "title": "Front-End Nanodegree (Non-Paid Version)",
-      "school": "Udacity",
-      "dates": 2016,
-      "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-    }, {
-      "title": "Intro to Computer Science",
-      "school": "Udacity",
-      "dates": 2015,
-      "url": "https://www.udacity.com/course/intro-to-computer-science--cs101"
-    }, {
-      "title": "HTML, CSS and Javascript",
-      "school": "Coursera - The Hong Kong University of Science and Technology",
-      "dates": 2015,
-      "url": "https://www.udacity.com/course/programming-languages--cs262"
-    }, {
-      "title": "Computer Science (multiple courses): Algorithms, Cryptography, Information Theory ",
-      "school": "Khan Academy",
-      "dates": 2015,
-      "url": "https://www.khanacademy.org/computing/computer-science"
-    }, {
-      "title": "Programming (multiple courses): HTML, CSS, Javascript and jQuery; Intro to SQL; JS: Games and Visualizations; JS: Natural Simulations ",
-      "school": "Khan Academy",
-      "dates": 2014,
-      "url": "https://www.khanacademy.org/computing/computer-programming"
-    }
-  ]
+    "title": "Front-End Nanodegree (Non-Paid Version)",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+  }, {
+    "title": "Intro to Computer Science",
+    "school": "Udacity",
+    "dates": 2015,
+    "url": "https://www.udacity.com/course/intro-to-computer-science--cs101"
+  }, {
+    "title": "HTML, CSS and Javascript",
+    "school": "Coursera - The Hong Kong University of Science and Technology",
+    "dates": 2015,
+    "url": "https://www.udacity.com/course/programming-languages--cs262"
+  }, {
+    "title": "Computer Science (multiple courses): Algorithms, Cryptography, Information Theory ",
+    "school": "Khan Academy",
+    "dates": 2015,
+    "url": "https://www.khanacademy.org/computing/computer-science"
+  }, {
+    "title": "Programming (multiple courses): HTML, CSS, Javascript and jQuery; Intro to SQL; JS: Games and Visualizations; JS: Natural Simulations ",
+    "school": "Khan Academy",
+    "dates": 2014,
+    "url": "https://www.khanacademy.org/computing/computer-programming"
+  }]
 }
 
 bio.display = function() {
@@ -142,7 +144,7 @@ work.display = function() {
   for (key in work.jobs) {
     if (work.jobs.hasOwnProperty(key)) {
       $("#workExperience").append(HTMLworkStart);
-      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer);
+      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer).replace("#", work.jobs[key].url);
       var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key].title);
       var formattedDates = HTMLworkDates.replace("%data%", work.jobs[key].dates);
       var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[key].location);
