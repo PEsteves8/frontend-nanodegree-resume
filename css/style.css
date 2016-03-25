@@ -77,8 +77,8 @@ p, li {
 }
 
 
-.task-list {
-  margin-top: 1%;
+.bullet-points {
+  margin-top: .5%;
   list-style-type: square;
   list-style-position: inside;
 }

@@ -7,9 +7,9 @@ var bio = {
     "github": "https://github.com/PEsteves8",
     "portfolio": "https://PEsteves8.github.io",
     //"twitter" : "@pauloesteves8",
-    "location": "Portugal"
+    "location": "Porto, Portugal"
   },
-  "welcomeMessage": "Welcome! After a few years working mostly in marketing and video production, I decided I was going to learn programming full-time for a while. I'm mostly comfortable with web (HTML, CSS and JS), including familiarity with both Knockout.js and Backbone.js frameworks, and some Python. Currently I'm looking for an entry-level job or an internship in this new field, so that I can keep learning the most valuable skills required to help build amazing web apps.",
+  "welcomeMessage": "Welcome! A while ago, after a few years working mostly in marketing and video production, I realized how much I loved programming and started learning it full-time. I'm mostly comfortable with web (HTML, CSS and JS), including familiarity with both Knockout.js and Backbone.js frameworks, and some Python. Currently I'm looking for an entry-level job or an internship in this new field, so that I can keep learning the most valuable skills required to help build amazing web apps.",
   "skills": [
     "Javascript", "HTML", "CSS", "Python", "Video Production",
     "Adobe Premiere Pro", "Adobe After Effects"
@@ -39,23 +39,50 @@ var work = {
     "location": "Porto",
     "dates": "2011-2016",
     "description": "I occasionally work as a freelance video producer, doing both corporate videos and content for TV and web.",
-    "url": "www.poo.com"
+    "url": "https://www.youtube.com/user/Stevesbros/videos?sort=p&view=0&flow=grid"
   }]
 };
 
 var projects = {
   "projects": [{
-    "title": "Portfolio Site",
-    "dates": "Jan 2016",
+    "title": "Calorie Tracker",
+    "dates": "March 2016",
     "images": [],
-    "description": "A simple portfolio webpage created using the Bootstrap framework"
+    "description": ["A lightweight web app for tracking daily calorie intake built using Backbone.js", "The data is retrieved using Nutritionix's API", "This project was built as a challenge  to learn a new MV* framework from scratch"],
+    "url": "https://pesteves8.github.io/calorie-tracker"
+
   }, {
-    "title": "CV",
+    "title": "Javascript Testing",
+    "dates": "March 2016",
+    "images": [],
+    "description": ["A simple list of testing written using the Jasmine testing framework", "The tests are built for a website provided by Udacity", "This project was essentially for the purpose of introducing test driven development"],
+    "url": "https://github.com/PEsteves8/frontend-nanodegree-feedreader-testing"
+  }, {
+    "title": "Neighborhood Map",
+    "dates": "March 2016",
+    "images": [],
+    "description": ["A page that shows a selection of some of the best night bars/clubs in Porto", "Built using the Knockout.js framework, it makes use of Google Maps and Foursquare APIs", "Multiple AJAX requests are used to populate the map with the locations and their details", "The purpose of the project was mainly to practice using modern Javascript design patterns and organizational frameworks (MV*)"],
+    "url": "https://pesteves8.github.io/frontend-nanodegree-neighborhood-map"
+  }, {
+    "title": "Website Optimization",
     "dates": "Feb 2016",
     "images": [],
-    "description": "The page you're visiting right now. The page gets loaded dynamically using Javascript and JSON"
+    "description": ["Optimized the critical rendering path of a provided webpage to drastically increase loading times", "Refactored code to allow for a scroll animation of 60 frames per second"],
+    "url": "https://github.com/PEsteves8/frontend-nanodegree-mobile-portfolio"
+  }, {
+    "title": "Arcade Game",
+    "dates": "Feb 2016",
+    "images": [],
+    "description": ["A clone of the popular oldie Frogger build using HTML5 Canvas", "Character and environment designs were provided by Udacity"],
+    "url": "https://pesteves8.github.io/frontend-nanodegree-arcade-game"
+  }, {
+    "title": "Personal Online Portfolio",
+    "dates": "Jan 2016",
+    "images": [],
+    "description": ["Created a responsive online portfolio, as a project for Udacity's \"Intro to HTML and CSS\" course", "Built using the popular Bootstrap framework"],
+    "url": "http://pesteves8.github.io/"
   }]
-}
+};
 
 var education = {
   "schools": [{
@@ -74,10 +101,40 @@ var education = {
     "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
   }],
   "onlineCourses": [{
-    "title": "Front-End Nanodegree (Non-Paid Version)",
+    "title": "Javascript Testing",
     "school": "Udacity",
     "dates": 2016,
-    "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+    "url": "https://www.udacity.com/course/javascript-testing--ud549"
+  }, {
+    "title": "Javascript Design Patterns - Organizational Frameworks",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/javascript-design-patterns--ud989"
+  }, {
+    "title": "Website Performance Optimization",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/website-performance-optimization--ud884"
+  }, {
+    "title": "Object Oriented Javascript",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/object-oriented-javascript--ud015"
+  }, {
+    "title": "Responsive Web Design Fundamentals",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/responsive-web-design-fundamentals--ud893"
+  }, {
+    "title": "Web-development",
+    "school": "Udacity",
+    "dates": 2015,
+    "url": "https://www.udacity.com/course/web-development--cs253"
+  }, {
+    "title": "Programming Languages",
+    "school": "Udacity",
+    "dates": 2015,
+    "url": "https://www.udacity.com/course/programming-languages--cs262"
   }, {
     "title": "Intro to Computer Science",
     "school": "Udacity",
@@ -99,7 +156,7 @@ var education = {
     "dates": 2014,
     "url": "https://www.khanacademy.org/computing/computer-programming"
   }]
-}
+};
 
 var languages = {
   languages: [{
@@ -116,7 +173,7 @@ var languages = {
     name: "Certificate of Proficiency in English, University of Cambridge",
     url: "http://www.cambridgeenglish.org/exams/proficiency/"
   }]
-}
+};
 
 
 bio.display = function() {
@@ -164,56 +221,56 @@ bio.display = function() {
   }
   $("#footerContacts").append(formattedPortfolio);
 
-}
+};
 
 work.display = function() {
-  for (key in work.jobs) {
-    if (work.jobs.hasOwnProperty(key)) {
-      $("#workExperience").append(HTMLworkStart);
-      var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[key].employer).replace("#", work.jobs[key].url);
-      var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[key].title);
-      var formattedDates = HTMLworkDates.replace("%data%", work.jobs[key].dates);
-      var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[key].location);
-      var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[key].description);
+  for (job in work.jobs) {
 
-      $(".work-entry:last").append(formattedEmployer + formattedTitle);
-      $(".work-entry:last").append(formattedDates);
-      $(".work-entry:last").append(formattedLocation);
-      $(".work-entry:last").append(formattedDescription);
+    $("#workExperience").append(HTMLworkStart);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace("#", work.jobs[job].url);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    $(".work-entry:last").append(formattedEmployer + formattedTitle);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedLocation);
+    $(".work-entry:last").append(formattedDescription);
 
 
 
-      if (work.jobs[key].tasks) {
-       $(".work-entry:last").append("<ul class='task-list'></ul>");
-        for (task in work.jobs[key].tasks) {
-          var formattedTask = HTMLworkTask.replace("%data%", work.jobs[key].tasks[task]);
-          $(".work-entry:last ul").append(formattedTask);
-        }
-
+    if (work.jobs[job].tasks) {
+      $(".work-entry:last").append("<ul class='bullet-points'></ul>");
+      for (task in work.jobs[job].tasks) {
+        var formattedTask = HTMLworkTask.replace("%data%", work.jobs[job].tasks[task]);
+        $(".work-entry:last ul").append(formattedTask);
       }
+
+
     }
   }
 }
 
 
 education.display = function() {
-  for (key in education.schools) {
-    if (education.schools.hasOwnProperty(key)) {
-      $("#education").append(HTMLschoolStart);
-      var formattedName = HTMLschoolName.replace("%data%", education.schools[key].name).replace("#", education.schools[key].url);
-      var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[key].degree);
-      var formattedDates = HTMLschoolDates.replace("%data%", education.schools[key].dates);
-      var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[key].location);
+  for (school in education.schools) {
 
-      $(".education-entry:last").append(formattedName + formattedDegree);
-      $(".education-entry:last").append(formattedDates);
-      $(".education-entry:last").append(formattedLocation);
-      if (education.schools[key].majors.length > 0) {
-        for (majorKey in education.schools[key].majors) {
-          var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[key].majors[majorKey]);
-          $(".education-entry:last").append(formattedMajor);
-        }
+    $("#education").append(HTMLschoolStart);
+    var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name).replace("#", education.schools[school].url);
+    var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+    var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+    var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+
+    $(".education-entry:last").append(formattedName + formattedDegree);
+    $(".education-entry:last").append(formattedDates);
+    $(".education-entry:last").append(formattedLocation);
+    if (education.schools[school].majors.length > 0) {
+      for (major in education.schools[school].majors) {
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
+        $(".education-entry:last").append(formattedMajor);
       }
+
     }
   }
 
@@ -223,43 +280,46 @@ education.display = function() {
 
   }
 
-  for (key in education.onlineCourses) {
+  for (course in education.onlineCourses) {
 
-    if (education.onlineCourses.hasOwnProperty(key)) {
+    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace("#", education.onlineCourses[course].url);
+    var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+    var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+    var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+    $(".education-entry:last").append(formattedTitle + formattedSchool);
+    $(".education-entry:last").append(formattedDates);
+    //$(".education-entry:last").append(formattedURL);
 
-      var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[key].title).replace("#", education.onlineCourses[key].url);
-      var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[key].school);
-      var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[key].dates);
-      var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[key].url);
-      $(".education-entry:last").append(formattedTitle + formattedSchool);
-      $(".education-entry:last").append(formattedDates);
-      //$(".education-entry:last").append(formattedURL);
 
-    }
   }
 
 }
 
 projects.display = function() {
-  for (key in projects.projects) {
-    if (projects.projects.hasOwnProperty(key)) {
-      $("#projects").append(HTMLprojectStart);
-      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[key].title);
-      $(".project-entry:last").append(formattedTitle);
-      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[key].dates);
-      $(".project-entry:last").append(formattedDates);
-      var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[key].description);
-      $(".project-entry:last").append(formattedDescription);
-      if (projects.projects[key].images.length > 0) {
-        for (imageKey in projects.projects[key].images) {
-          var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[key].images[imageKey]);
-          $(".project-entry:last").append(formattedImage);
-        }
+  for (project in projects.projects) {
+
+    $("#projects").append(HTMLprojectStart);
+    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].url);
+    $(".project-entry:last").append(formattedTitle);
+    var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+    $(".project-entry:last").append(formattedDates);
+
+    if (projects.projects[project].description) {
+      $(".project-entry:last").append("<br><ul class='bullet-points'></ul>");
+      for (item in projects.projects[project].description) {
+        var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description[item]);
+        $(".project-entry:last ul").append(formattedDescription);
       }
     }
+    if (projects.projects[project].images.length > 0) {
+      for (image in projects.projects[project].images) {
+        var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+        $(".project-entry:last").append(formattedImage);
+      }
+    }
+
   }
 }
-
 languages.display = function() {
   for (language in languages.languages) {
     console.log("poo");
@@ -271,14 +331,14 @@ languages.display = function() {
   if (languages.certificates) {
     $("#languages").append(HTMLcertificateHeader);
     for (certificate in languages.certificates) {
-var formattedCertificateURL = HTMLcertificateURL.replace("%data%", languages.certificates[certificate].url);
-var formattedCertificateName = HTMLcertificateName.replace("%data%", languages.certificates[certificate].name);
+      var formattedCertificateURL = HTMLcertificateURL.replace("%data%", languages.certificates[certificate].url);
+      var formattedCertificateName = HTMLcertificateName.replace("%data%", languages.certificates[certificate].name);
 
 
-$("#languages").append(formattedCertificateURL + formattedCertificateName);
-    }
+      $("#languages").append(formattedCertificateURL + formattedCertificateName);
     }
   }
+}
 
 
 bio.display();
