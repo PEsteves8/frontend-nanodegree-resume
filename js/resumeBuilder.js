@@ -5,10 +5,11 @@ var bio = {
     "mobile": "+351919595441",
     "email": "pauloesteves8@gmail.com",
     "github": "https://github.com/PEsteves8",
+    "portfolio": "https://PEsteves8.github.io",
     //"twitter" : "@pauloesteves8",
-    "location": "Porto, Portugal"
+    "location": "Portugal"
   },
-  "welcomeMessage": "Welcome! I built this CV as a way to practice using jQuery and JSON to keep the HTML uploaded. It was originally one of Udacity's projects for their Front-End Nanodegree, but it sure does a fine job as an actual CV! Feel free to contact me.",
+  "welcomeMessage": "Welcome! After a few years working mostly in marketing and video production, I decided I was going to learn programming full-time for a while. I'm mostly comfortable with web (HTML, CSS and JS), including familiarity with both Knockout.js and Backbone.js frameworks, and some Python. Currently I'm looking for an entry-level job or an internship in this new field, so that I can keep learning the most valuable skills required to help build amazing web apps.",
   "skills": [
     "Javascript", "HTML", "CSS", "Python", "Video Production",
     "Adobe Premiere Pro", "Adobe After Effects"
@@ -125,22 +126,25 @@ bio.display = function() {
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%data%", bio.contacts.github);
+  var formattedPortfolio = HTMLportfolio.replace("%data%", bio.contacts.portfolio).replace("%data%", bio.contacts.portfolio);
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-  var formattedPictureURL = HTMLbioPic.replace("%data%", bio.pictureURL);
+  var formattedPicture = HTMLbioPic.replace("%data%", bio.pictureURL);
   var formattedWelcome_message = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
+  $("#header").append(formattedPicture);
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
   $("#topContacts").append(formattedMobile);
   $("#topContacts").append(formattedEmail);
   $("#topContacts").append(formattedGithub);
+  $("#topContacts").append(formattedPortfolio);
 
   if (bio.contacts.twitter) {
     $("#topContacts").append(formattedTwitter);
   }
   $("#topContacts").append(formattedLocation);
-  $("#header").append(formattedPictureURL);
+
   $("#header").append(formattedWelcome_message);
 
 
@@ -158,6 +162,7 @@ bio.display = function() {
   if (bio.contacts.twitter) {
     $("#footerContacts").append(formattedTwitter);
   }
+  $("#footerContacts").append(formattedPortfolio);
 
 }
 
