@@ -22,7 +22,8 @@ var work = {
     "title": "Marketing Intern",
     "location": "Dublin, Ireland",
     "dates": "Feb 2015 - Aug 2015",
-    "description": "During my stay at SurveyMonkey Inc. (part of the <a href='http://www.portugalglobal.pt/PT/InovContacto/Paginas/AboutInovContacto.aspx' class='icontacto' target='_blank'>Inov Contacto</a> internship program) I had a number of different tasks. Here are a few of them:<br><br>- Interviewed B2B customers to help with the development of case studies for promotional purposes.<br>- Developed animations featuring fictionalized sales processes to be presented internally among sales teams.<br>- Translated various documents (PT to EN).<br>- Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze.<br>- Assisted the financial team.",
+    "description": "During my stay at SurveyMonkey Inc. (part of the <a href='http://www.portugalglobal.pt/PT/InovContacto/Paginas/AboutInovContacto.aspx' class='icontacto' target='_blank'>Inov Contacto</a> internship program) I had a number of different tasks, such as:",
+    "tasks": ["Interviewed B2B customers to help with the development of case studies for promotional purposes", "Developed animations featuring fictionalized sales processes to be presented internally among sales teams", "Translated various documents (PT to EN)", "Gathered contacts of key employees of potential customers for outbound initiatives using Linkedin and Datanyze", "Assisted the financial team"],
     "url": "https://www.surveymonkey.com"
   }, {
     "employer": "Smartling Inc.",
@@ -99,6 +100,24 @@ var education = {
   }]
 }
 
+var languages = {
+  languages: [{
+    "name": "Portuguese",
+    "level": "Native"
+  }, {
+    "name": "English",
+    "level": "Proficient (C2)"
+  }, {
+    "name": "Spanish",
+    "level": "Independent User (B1)"
+  }],
+  certificates: [{
+    name: "Certificate of Proficiency in English, University of Cambridge",
+    url: "http://www.cambridgeenglish.org/exams/proficiency/"
+  }]
+}
+
+
 bio.display = function() {
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -125,18 +144,20 @@ bio.display = function() {
   $("#header").append(formattedWelcome_message);
 
 
-  $("#header").append(HTMLskillsStart);
-  for (key in bio.skills) {
-    var formattedSkills = HTMLskills.replace("%data%", bio.skills[key]);
-    $("#skills").append(formattedSkills);
-  }
+  /*  $("#header").append(HTMLskillsStart);
+    for (key in bio.skills) {
+      var formattedSkills = HTMLskills.replace("%data%", bio.skills[key]);
+      $("#skills").append(formattedSkills);
+    }*/
 
   // Code to simply add the basic contact info in the footer
   $("#footerContacts").append(formattedMobile);
   $("#footerContacts").append(formattedEmail);
   $("#footerContacts").append(formattedGithub);
-  $("#footerContacts").append(formattedTwitter);
   $("#footerContacts").append(formattedLocation);
+  if (bio.contacts.twitter) {
+    $("#footerContacts").append(formattedTwitter);
+  }
 
 }
 
@@ -149,10 +170,22 @@ work.display = function() {
       var formattedDates = HTMLworkDates.replace("%data%", work.jobs[key].dates);
       var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[key].location);
       var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[key].description);
+
       $(".work-entry:last").append(formattedEmployer + formattedTitle);
       $(".work-entry:last").append(formattedDates);
       $(".work-entry:last").append(formattedLocation);
       $(".work-entry:last").append(formattedDescription);
+
+
+
+      if (work.jobs[key].tasks) {
+       $(".work-entry:last").append("<ul class='task-list'></ul>");
+        for (task in work.jobs[key].tasks) {
+          var formattedTask = HTMLworkTask.replace("%data%", work.jobs[key].tasks[task]);
+          $(".work-entry:last ul").append(formattedTask);
+        }
+
+      }
     }
   }
 }
@@ -222,10 +255,32 @@ projects.display = function() {
   }
 }
 
+languages.display = function() {
+  for (language in languages.languages) {
+    console.log("poo");
+    var formattedLanguageName = HTMLlanguageName.replace("%data%", languages.languages[language].name);
+    var formattedLanguageLevel = HTMLlanguageLevel.replace("%data%", languages.languages[language].level);
+    $("#languages").append(formattedLanguageName + formattedLanguageLevel)
+  }
+
+  if (languages.certificates) {
+    $("#languages").append(HTMLcertificateHeader);
+    for (certificate in languages.certificates) {
+var formattedCertificateURL = HTMLcertificateURL.replace("%data%", languages.certificates[certificate].url);
+var formattedCertificateName = HTMLcertificateName.replace("%data%", languages.certificates[certificate].name);
+
+
+$("#languages").append(formattedCertificateURL + formattedCertificateName);
+    }
+    }
+  }
+
+
 bio.display();
 work.display();
-education.display()
-projects.display()
+education.display();
+projects.display();
+languages.display();
 
 // Code to add the "Where I worked" map
 $("#mapDiv").append(googleMap);
@@ -246,3 +301,26 @@ function inName() {
     return name[0] + " " + name[1];
 }
 */
+
+
+if (document.getElementsByClassName('flex-item').length === 0) {
+  document.getElementById('topContacts').style.backgroundColor = 'black';
+}
+if (document.getElementsByTagName('h1').length === 0) {
+  document.getElementById('header').style.backgroundColor = 'black';
+}
+if (document.getElementsByClassName('work-entry').length === 0) {
+  document.getElementById('workExperience').backgroundColor = 'black';
+}
+if (document.getElementsByClassName('project-entry').length === 0) {
+  document.getElementById('projects').style.backgroundColor = 'black';
+}
+if (document.getElementsByClassName('education-entry').length === 0) {
+  document.getElementById('education').style.backgroundColor = 'black';
+}
+if (document.getElementsByClassName('flex-item').length === 0) {
+  document.getElementById('lets-connect').style.backgroundColor = 'black';
+}
+if (document.getElementById('map') === null) {
+  document.getElementById('mapDiv').style.backgroundColor = 'black';
+}

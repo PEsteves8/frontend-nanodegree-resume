@@ -5,18 +5,15 @@ body, div, ul, li, p, h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-
 }
 
-#main {
 
+#main {
   border-style: solid;
   border-color: black;
   border-left-width: 20%;
   border-right-width: auto;
-
 }
-
 .clear-fix {
   overflow: auto;
 }
@@ -41,16 +38,22 @@ h3 {
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  padding: 2% 5% 0;
 }
 h4 {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   color: #4a4a4a;
   line-height: 17px;
 }
-h2, h3, h4, h5 {
+h2, h4, h5 {
   padding: 10px 5%;
 }
+
+ul {
+  list-style: none;
+}
+
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -65,11 +68,19 @@ h2, h3, h4, h5 {
   line-height: 16px;
   float: right;
 }
-p {
+p, li {
   font-size: 14px;
   color: #333;
   line-height: 21px;
 }
+
+
+.task-list {
+  margin-top: 1%;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
 a {
   color: #1199c3;
   text-decoration: none;
@@ -77,11 +88,13 @@ a {
   display: block;
 }
 .welcome-message {
-  font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
+  margin: 0 5% 0 19%;
+  text-align: justify;
 }
+
 #skills-h3 {
   color: #f5ae23;
   display: none;
@@ -105,8 +118,6 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
-
 #header {
   background-color: #484848;
 }
@@ -121,15 +132,14 @@ a {
 .center-content {
   padding: 2.5% 5%;
 }
-ul {
-  list-style-type: none;
-}
+
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  padding: 10px 10px 10px 15px;
+  width: 140px;
   display: none;
 }
+
 img {
   padding: 10px;
 }
