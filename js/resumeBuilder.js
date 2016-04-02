@@ -9,7 +9,7 @@ var bio = {
     //"twitter" : "@pauloesteves8",
     "location": "Porto, Portugal"
   },
-  "welcomeMessage": "Welcome! A while ago, after a few years working mostly in marketing and video production, I realized how much I loved programming and started learning it full-time. I'm mostly comfortable with web (HTML, CSS and JS), including familiarity with both Knockout.js and Backbone.js frameworks, and some Python. Currently I'm looking for an entry-level job or an internship in this new field, so that I can keep learning the most valuable skills required to help build amazing web apps.",
+  "welcomeMessage": "Welcome! A while ago, after a few years working mostly in marketing, video production and translation, I realized how much I loved programming and started learning it full-time. I'm mostly comfortable with web dev (HTML, CSS and JS), including Knockout.js, Backbone.js, some Python, and other tools, frameworks and libraries. Please, have a look and feel free to get in touch!",
   "skills": [
     "Javascript", "HTML", "CSS", "Python", "Video Production",
     "Adobe Premiere Pro", "Adobe After Effects"
