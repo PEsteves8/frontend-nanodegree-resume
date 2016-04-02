@@ -1,3 +1,4 @@
 # Resume
-An interactive resume
+An interactive resume.
+
 Available [here](https://pesteves8.github.io/resume)
