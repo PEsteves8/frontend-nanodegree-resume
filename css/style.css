@@ -93,7 +93,7 @@ a {
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
-  margin: .7% 5% 0 16%;
+  margin: 10px;
   text-align: justify;
 }
 
@@ -203,4 +203,10 @@ span {
   #skills-h3, .biopic {
     display: block;
   }
+}
+
+@media only print {
+  #mapDiv {display: none;}
+  .welcome-message {font-size: 10px;
+  margin: 0 auto;}
 }

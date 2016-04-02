@@ -14,7 +14,7 @@ var bio = {
     "Javascript", "HTML", "CSS", "Python", "Video Production",
     "Adobe Premiere Pro", "Adobe After Effects"
   ],
-  "pictureURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/070/049/276f628.jpg"
+  "pictureURL": "images/photopass.jpg"
 };
 
 var work = {
@@ -48,14 +48,14 @@ var projects = {
     "title": "Calorie Tracker",
     "dates": "March 2016",
     "images": [],
-    "description": ["A lightweight web app for tracking daily calorie intake built using Backbone.js", "The data is retrieved using Nutritionix's API", "This project was built as a challenge  to learn a new MV* framework from scratch"],
+    "description": ["A lightweight web app for tracking daily calorie intake built using Backbone.js", "The data is retrieved using Nutritionix's API", "The calendar allows users to monitor their daily calorie intake"],
     "url": "https://pesteves8.github.io/calorie-tracker"
 
   }, {
     "title": "Javascript Testing",
     "dates": "March 2016",
     "images": [],
-    "description": ["A simple list of testing written using the Jasmine testing framework", "The tests are built for a website provided by Udacity", "This project was essentially for the purpose of introducing test driven development"],
+    "description": ["A simple sequence of tests written using the Jasmine testing framework", "The tests are built for a website provided by Udacity", "This project had the purpose of introducing the concepts behind test driven development"],
     "url": "https://github.com/PEsteves8/frontend-nanodegree-feedreader-testing"
   }, {
     "title": "Neighborhood Map",
@@ -88,14 +88,14 @@ var education = {
   "schools": [{
     "name": "School of Accounting and Administration of Porto",
     "location": "Porto, Portugal",
-    "degree": "BA - 3 year degree",
+    "degree": "Bachelor Degree",
     "majors": ["Marketing"],
     "dates": "2007-2010",
     "url": "http://iscap.ipp.pt/"
   }, {
     "name": "Faculty of Engineering of the University of Porto",
     "location": "Porto, Portugal",
-    "degree": "N/A - 1st year attendance",
+    "degree": "1st year attendance",
     "majors": ["Electrical Engineering"],
     "dates": "2006-2007",
     "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
