@@ -175,13 +175,13 @@ span {
 #topContacts {
   max-width: 850px;
   padding-top:  5px;
+  margin-left: 20%;
 }
 
 #topContacts li {
   font-size: 1.1em;
   line-height: 2em;
 }
-
 
 
 /* Media queries to handle various device widths */
@@ -205,6 +205,9 @@ span {
   }
   .welcome-message {
     display: none;
+  }
+  #topContacts {
+    margin: 0 auto;
   }
 }
 #map {
