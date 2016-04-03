@@ -144,7 +144,7 @@ var education = {
     "title": "HTML, CSS and Javascript",
     "school": "Coursera - The Hong Kong University of Science and Technology",
     "dates": 2015,
-    "url": "https://www.udacity.com/course/programming-languages--cs262"
+    "url": "https://www.coursera.org/learn/html-css-javascript"
   }, {
     "title": "Computer Science (multiple courses): Algorithms, Cryptography, Information Theory ",
     "school": "Khan Academy",
