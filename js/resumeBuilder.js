@@ -9,7 +9,7 @@ var bio = {
     //"twitter" : "@pauloesteves8",
     "location": "Porto, Portugal"
   },
-  "welcomeMessage": "Welcome! A while ago, after a few years working mostly in marketing, video production and translation, I realized how much I loved programming and started learning it full-time. I'm mostly comfortable with web dev (HTML, CSS and JS), including Knockout.js, Backbone.js, some Python, and other tools, frameworks and libraries. Please, have a look and feel free to get in touch!",
+  "welcomeMessage": "",
   "skills": [
     "Javascript", "HTML", "CSS", "Python", "Video Production",
     "Adobe Premiere Pro", "Adobe After Effects"
@@ -189,18 +189,23 @@ bio.display = function() {
   var formattedPicture = HTMLbioPic.replace("%data%", bio.pictureURL);
   var formattedWelcome_message = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-  $("#header").append(formattedPicture);
+
+
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
+  $("#header").prepend(formattedPicture);
+
+
   $("#topContacts").append(formattedMobile);
   $("#topContacts").append(formattedEmail);
+  $("#topContacts").append(formattedLocation);
   $("#topContacts").append(formattedGithub);
   $("#topContacts").append(formattedPortfolio);
 
   if (bio.contacts.twitter) {
     $("#topContacts").append(formattedTwitter);
   }
-  $("#topContacts").append(formattedLocation);
+
 
   $("#header").append(formattedWelcome_message);
 
@@ -322,7 +327,6 @@ projects.display = function() {
 }
 languages.display = function() {
   for (language in languages.languages) {
-    console.log("poo");
     var formattedLanguageName = HTMLlanguageName.replace("%data%", languages.languages[language].name);
     var formattedLanguageLevel = HTMLlanguageLevel.replace("%data%", languages.languages[language].level);
     $("#languages").append(formattedLanguageName + formattedLanguageLevel)
