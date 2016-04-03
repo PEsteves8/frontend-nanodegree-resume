@@ -109,7 +109,6 @@ a {
   color: #f5ae23;
 }
 .white-text {
-  font-weight: bold;
   color: #fff;
 }
 .gray {
@@ -176,6 +175,7 @@ span {
   max-width: 850px;
   padding-top:  5px;
   margin-left: 20%;
+
 }
 
 #topContacts li {
