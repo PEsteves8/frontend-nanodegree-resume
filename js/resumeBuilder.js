@@ -1,6 +1,6 @@
 var bio = {
   "name": "Paulo Esteves",
-  "role": "Web Developer",
+  "role": "Front-End Web Developer",
   "contacts": {
     "mobile": "+351919595441",
     "email": "pauloesteves8@gmail.com",
