@@ -44,7 +44,15 @@ var work = {
 };
 
 var projects = {
-  "projects": [{
+  "projects": [
+    {
+     "title": "mrMDB - Aggregator for IMDb, Rotten Tomatoes, Metacritic and other info",
+     "dates": "May 2016",
+     "images": [],
+     "description": ["A personal project that allows users to get info from IMDb, Metacritic and Rotten Tomatoes in one place", "Built with Angular 1.x, Ecmascript6 (2015/Harmony), JS Modules (import/export syntax) and Sass", "Built for personal usage and to practice the technologies mentioned above as well as some others like UI-Router (Angular), jshint, postcss (autoprefixer) and Webpack for bundling and as a gulp+bower replacement"],
+     "url": "http://pesteves8.github.io/mrmdb"
+   },
+   {
     "title": "Calorie Tracker",
     "dates": "March 2016",
     "images": [],
@@ -75,12 +83,6 @@ var projects = {
     "images": [],
     "description": ["A clone of the popular oldie Frogger build using HTML5 Canvas", "Character and environment designs were provided by Udacity"],
     "url": "https://pesteves8.github.io/frontend-nanodegree-arcade-game"
-  }, {
-    "title": "Personal Online Portfolio",
-    "dates": "Jan 2016",
-    "images": [],
-    "description": ["Created a responsive online portfolio, as a project for Udacity's \"Intro to HTML and CSS\" course", "Built using the popular Bootstrap framework"],
-    "url": "http://pesteves8.github.io/"
   }]
 };
 
