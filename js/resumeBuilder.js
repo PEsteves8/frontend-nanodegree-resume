@@ -18,7 +18,16 @@ var bio = {
 };
 
 var work = {
-  "jobs": [{
+  "jobs": [
+    {
+    "employer": "Markdata",
+    "title": "Web Developer",
+    "location": "Lisbon, Portugal",
+    "dates": "Jun 2016 - Current",
+    "description": "I'm helping building web apps (backoffice software for market research data) using the popular Angular2 framework. Occasionally, I also work on the back-end, which is built using C# and .NET Core.",
+    "tasks": ["Building the front-end part of multiple web apps", "Tweaking the back end according to the requirements", ""],
+    "url": "https://www.surveymonkey.com"
+  }, {
     "employer": "SurveyMonkey Inc.",
     "title": "Marketing Intern",
     "location": "Dublin, Ireland",
