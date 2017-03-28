@@ -69,6 +69,12 @@ var projects = {
     "url": "https://pesteves8.github.io/calorie-tracker"
 
   }, {
+    "title": "Developing Scalable Apps in Python",
+    "dates": "December 2016",
+    "images": [],
+    "description": ["Building the back end of a web app with Python and Google App Engine"],
+    "url": "https://github.com/PEsteves8/frontend-nanodegree-feedreader-testing"
+  }, {
     "title": "Javascript Testing",
     "dates": "March 2016",
     "images": [],
