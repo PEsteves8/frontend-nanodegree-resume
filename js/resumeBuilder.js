@@ -371,9 +371,9 @@ languages.display();
 $("#mapDiv").append(googleMap);
 
 // Part of one of the quizzes, this code logs the position of each mouse click
-$(document).click(function(loc) {
-  logClicks(loc.pageX, loc.pageY);
-});
+//$(document).click(function(loc) {
+//  logClicks(loc.pageX, loc.pageY);
+//});
 
 // Part of one of the quizzes, this code adds a button that changes de capitalization
 // of the name of the CV holder
