@@ -24,7 +24,7 @@ var work = {
     "title": "Web Developer",
     "location": "Lisbon, Portugal",
     "dates": "Jun 2016 - Current",
-    "description": "I'm helping building web apps (backoffice software for market research data) using the popular Angular2 framework. Occasionally, I also work on the back-end, which is built using C# and .NET Core.",
+    "description": "I'm helping building web apps (backoffice software for market research data) using the popular Angular2 framework. I also work on the back-end, which is built using C# and .NET Core.",
     "tasks": ["Building the front-end part of multiple web apps", "Tweaking the back end according to the requirements"],
     "url": "http://www.marktest.com/wap/"
   }, {
@@ -69,12 +69,6 @@ var projects = {
     "url": "https://pesteves8.github.io/calorie-tracker"
 
   }, {
-    "title": "Developing Scalable Apps in Python",
-    "dates": "December 2016",
-    "images": [],
-    "description": ["Building the back end of a web app with Python and Google App Engine"],
-    "url": "https://github.com/PEsteves8/frontend-nanodegree-feedreader-testing"
-  }, {
     "title": "Javascript Testing",
     "dates": "March 2016",
     "images": [],
@@ -118,6 +112,11 @@ var education = {
     "url": "https://sigarra.up.pt/feup/pt/web_page.inicial"
   }],
   "onlineCourses": [{
+    "title": "Developing Scalable Apps in Python",
+    "school": "Udacity",
+    "dates": 2016,
+    "url": "https://www.udacity.com/course/developing-scalable-apps-in-python--ud858"
+  }, {
     "title": "Javascript Testing",
     "school": "Udacity",
     "dates": 2016,
