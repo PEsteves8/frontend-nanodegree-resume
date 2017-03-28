@@ -377,6 +377,7 @@ $("#mapDiv").append(googleMap);
 // });
 
 
+
 // Part of one of the quizzes, this code adds a button that changes de capitalization
 // of the name of the CV holder
 /* $("#main").append(internationalizeButton);
