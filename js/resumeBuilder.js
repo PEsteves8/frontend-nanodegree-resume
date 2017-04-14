@@ -4,9 +4,9 @@ var bio = {
   "contacts": {
     "mobile": "+351919595441",
     "email": "pauloesteves8@gmail.com",
-    "github": "https://github.com/PEsteves8",
-    "portfolio": "https://PEsteves8.github.io",
-    //"twitter" : "@pauloesteves8",
+    "github": {"link": "https://github.com/PEsteves8", "name": "github.com/PEsteves8" },
+    "portfolio": {"link": "https://PEsteves8.github.io", "name": "PEsteves8.github.io" },
+    "medium" : {"link": "https://www.medium.com/@pauloesteves8", "name": "@pauloesteves8" },
     "location": "Porto, Portugal"
   },
   "welcomeMessage": "",
@@ -198,9 +198,9 @@ bio.display = function() {
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github).replace("%data%", bio.contacts.github);
-  var formattedPortfolio = HTMLportfolio.replace("%data%", bio.contacts.portfolio).replace("%data%", bio.contacts.portfolio);
-  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  var formattedGithub = HTMLgithub.replace("%link%", bio.contacts.github.link).replace("%name%", bio.contacts.github.name);
+  var formattedPortfolio = HTMLportfolio.replace("%link%", bio.contacts.portfolio.link).replace("%name%", bio.contacts.portfolio.name);
+  var formattedMedium = HTMLmedium.replace("%link%", bio.contacts.medium.link).replace("%name%", bio.contacts.medium.name);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedPicture = HTMLbioPic.replace("%data%", bio.pictureURL);
   var formattedWelcome_message = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -218,9 +218,9 @@ bio.display = function() {
   $("#topContacts").append(formattedGithub);
   $("#topContacts").append(formattedPortfolio);
 
-  if (bio.contacts.twitter) {
-    $("#topContacts").append(formattedTwitter);
-  }
+  
+  $("#topContacts").append(formattedMedium);
+  
 
 
   $("#header").append(formattedWelcome_message);
@@ -237,9 +237,9 @@ bio.display = function() {
   $("#footerContacts").append(formattedEmail);
   $("#footerContacts").append(formattedGithub);
   $("#footerContacts").append(formattedLocation);
-  if (bio.contacts.twitter) {
-    $("#footerContacts").append(formattedTwitter);
-  }
+  
+    $("#footerContacts").append(formattedMedium);
+  
   $("#footerContacts").append(formattedPortfolio);
 
 };
@@ -371,9 +371,11 @@ languages.display();
 $("#mapDiv").append(googleMap);
 
 // Part of one of the quizzes, this code logs the position of each mouse click
-//$(document).click(function(loc) {
-//  logClicks(loc.pageX, loc.pageY);
-//});
+
+// $(document).click(function(loc) {
+//   logClicks(loc.pageX, loc.pageY);
+// });
+
 
 // Part of one of the quizzes, this code adds a button that changes de capitalization
 // of the name of the CV holder
