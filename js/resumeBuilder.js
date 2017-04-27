@@ -55,6 +55,13 @@ var work = {
 var projects = {
   "projects": [
     {
+     "title": "Video Wall 3000",
+     "dates": "April 2017",
+     "images": [],
+     "description": ["Built on Angular and Firebase", "Originally developed as a front-end for a Mongo/Express project"],
+     "url": "http://pesteves8.github.io/video-wall"
+   },
+    {
      "title": "mrMDB - Aggregator for IMDb, Rotten Tomatoes, Metacritic and other info",
      "dates": "May 2016",
      "images": [],
