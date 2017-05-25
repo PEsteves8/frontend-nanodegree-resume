@@ -2,12 +2,12 @@ var bio = {
   "name": "Paulo Esteves",
   "role": "Front-End Web Developer",
   "contacts": {
-    "mobile": "+351919595441",
+    "linkedin": {"link": "https://www.linkedin.com/in/pauloesteves8", "name": "pauloesteves8" },
     "email": "pauloesteves8@gmail.com",
     "github": {"link": "https://github.com/PEsteves8", "name": "github.com/PEsteves8" },
     "portfolio": {"link": "https://PEsteves8.github.io", "name": "PEsteves8.github.io" },
     "medium" : {"link": "https://www.medium.com/@pauloesteves8", "name": "@pauloesteves8" },
-    "location": "Porto, Portugal"
+    "location": "Lisbon, Portugal"
   },
   "welcomeMessage": "",
   "skills": [
@@ -203,7 +203,7 @@ bio.display = function() {
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+  var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedGithub = HTMLgithub.replace("%link%", bio.contacts.github.link).replace("%name%", bio.contacts.github.name);
   var formattedPortfolio = HTMLportfolio.replace("%link%", bio.contacts.portfolio.link).replace("%name%", bio.contacts.portfolio.name);
@@ -219,7 +219,7 @@ bio.display = function() {
   $("#header").prepend(formattedPicture);
 
 
-  $("#topContacts").append(formattedMobile);
+  $("#topContacts").append(formattedLinkedin);
   $("#topContacts").append(formattedEmail);
   $("#topContacts").append(formattedLocation);
   $("#topContacts").append(formattedGithub);
@@ -240,7 +240,7 @@ bio.display = function() {
     }*/
 
   // Code to simply add the basic contact info in the footer
-  $("#footerContacts").append(formattedMobile);
+  $("#footerContacts").append(formattedLinkedin);
   $("#footerContacts").append(formattedEmail);
   $("#footerContacts").append(formattedGithub);
   $("#footerContacts").append(formattedLocation);
