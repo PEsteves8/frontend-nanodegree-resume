@@ -203,7 +203,7 @@ bio.display = function() {
 
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-  var formattedLinkedin = HTMLlinkedin.replace("%data%", bio.contacts.linkedin);
+  var formattedLinkedin = HTMLlinkedin.replace("%link%", bio.contacts.linkedin.link).replace("%name%", bio.contacts.linkedin.name);
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedGithub = HTMLgithub.replace("%link%", bio.contacts.github.link).replace("%name%", bio.contacts.github.name);
   var formattedPortfolio = HTMLportfolio.replace("%link%", bio.contacts.portfolio.link).replace("%name%", bio.contacts.portfolio.name);
