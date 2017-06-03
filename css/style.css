@@ -143,13 +143,13 @@ span {
 .ghlink:link {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
   display: inline;
 }
 .ghlink:visited {
   text-decoration: inherit;
   color: inherit;
-  cursor: auto;
+  cursor: pointer;
 }
 .icontacto {
   display: inline;
