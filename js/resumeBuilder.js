@@ -25,7 +25,7 @@ var work = {
     "location": "Lisbon, Portugal",
     "dates": "Jun 2016 - Current",
     "description": "I'm helping building web apps (backoffice software for market research data) using the popular Angular2 framework. I also work on the back-end, which is built using C# and .NET Core.",
-    "tasks": ["Building the front-end part of multiple web apps", "Tweaking the back end according to the requirements"],
+    "tasks": ["Building the front-end part of multiple web apps", "Contributing to the development of their back-ends"],
     "url": "http://www.marktest.com/wap/"
   }, {
     "employer": "SurveyMonkey Inc.",
