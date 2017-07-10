@@ -7,7 +7,8 @@ var bio = {
     "github": {"link": "https://github.com/PEsteves8", "name": "github.com/PEsteves8" },
     "portfolio": {"link": "https://PEsteves8.github.io", "name": "PEsteves8.github.io" },
     "medium" : {"link": "https://www.medium.com/@pauloesteves8", "name": "@pauloesteves8" },
-    "location": "Lisbon, Portugal"
+    "location": "Lisbon, Portugal",
+    "contact": "+351919595441"
   },
   "welcomeMessage": "",
   "skills": [
@@ -37,7 +38,7 @@ var work = {
     "url": "https://www.surveymonkey.com"
   }, {
     "employer": "Smartling Inc.",
-    "title": "Translator (English to Portuguese(PT)",
+    "title": "Translator (English to Portuguese(PT))",
     "location": "Online",
     "dates": "2013-2016",
     "description": "Smartling is a fast and easy way for people to translate and localize their websites and apps.<br>For the past few years, I've been working as one of the English to Portuguese (PT) translators.",
@@ -209,6 +210,7 @@ bio.display = function() {
   var formattedPortfolio = HTMLportfolio.replace("%link%", bio.contacts.portfolio.link).replace("%name%", bio.contacts.portfolio.name);
   var formattedMedium = HTMLmedium.replace("%link%", bio.contacts.medium.link).replace("%name%", bio.contacts.medium.name);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.contact);
   var formattedPicture = HTMLbioPic.replace("%data%", bio.pictureURL);
   var formattedWelcome_message = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
@@ -216,16 +218,17 @@ bio.display = function() {
 
   $("#header").prepend(formattedRole);
   $("#header").prepend(formattedName);
+  
   $("#header").prepend(formattedPicture);
 
-
-  $("#topContacts").append(formattedLinkedin);
+  $("#topContacts").append(formattedMobile);
   $("#topContacts").append(formattedEmail);
   $("#topContacts").append(formattedLocation);
+
+  $("#topContacts").append(formattedLinkedin);
   $("#topContacts").append(formattedGithub);
   $("#topContacts").append(formattedPortfolio);
-
-  
+    
   $("#topContacts").append(formattedMedium);
   
 
@@ -244,6 +247,7 @@ bio.display = function() {
   $("#footerContacts").append(formattedEmail);
   $("#footerContacts").append(formattedGithub);
   $("#footerContacts").append(formattedLocation);
+  $("#footerContacts").append(formattedMobile);
   
     $("#footerContacts").append(formattedMedium);
   
