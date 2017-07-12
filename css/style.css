@@ -223,7 +223,7 @@ span {
     display: inline-block;
     width: 95px;
     margin: 80px 0px 0px 20px;
-    position: fixed;
+    position: absolute; 
 
   }
 
